@@ -16,6 +16,14 @@
 
 package com.example.android.android_me.ui;
 
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
