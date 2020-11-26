@@ -1,3 +1,4 @@
+
 /*
 * Copyright (C) 2017 The Android Open Source Project
 *
@@ -17,16 +18,22 @@
 package com.example.android.android_me.ui;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import com.example.android.android_me.R;
 import com.example.android.android_me.data.AndroidImageAssets;
 
 public class BodyPartFragment extends Fragment {
+
 
     // TODO (1) Create a setter method and class variable to set and store of a list of image resources
 
@@ -49,7 +56,7 @@ public class BodyPartFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_body_part, container, false);
 
         // Get a reference to the ImageView in the fragment layout
-        ImageView imageView = (ImageView) rootView.findViewById(R.id.body_part_image_view);
+        ImageView imageView = (ImageView) rootView.findViewById(R.id.IVbody_part);
 
         // Set the image to the first in our list of head images
         imageView.setImageResource(AndroidImageAssets.getHeads().get(0));
