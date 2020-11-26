@@ -33,7 +33,11 @@
         <!--The container should be 180dp in height -->
 
 
-
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment"
+            android:name="com.example.android.android_me.ui.BodyPartFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </ScrollView>
