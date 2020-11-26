@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 
 import com.example.android.android_me.R;
+import com.example.android.android_me.data.AndroidImageAssets;
 
 // This activity will display a custom Android image composed of three body parts: head, body, and legs
 public class AndroidMeActivity extends AppCompatActivity {
@@ -16,20 +17,38 @@ public class AndroidMeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_me);
 
-        // Create a new head BodyPartFragment
+        // HeadFragment Starting...
         BodyPartFragment headFragment = new BodyPartFragment();
-
-        // TODO (4) Set the list of image id's for the head fragment and set the position to the second image in the list
+        headFragment.setmImageIds(AndroidImageAssets.getHeads());
+        headFragment.setmListIndex(0);
 
         // Add the fragment to its container using a FragmentManager and a Transaction
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         fragmentManager.beginTransaction()
-                .add(R.id.head_container, headFragment)
+                .add(R.id.Headfragment, headFragment)
                 .commit();
+        // ...End
 
-        // TODO (5) Create and display the body and leg BodyPartFragments
+        //BodyFragment Starting...
+        BodyPartFragment bodyFragment = new BodyPartFragment();
+        bodyFragment.setmImageIds(AndroidImageAssets.getBodies());
+        bodyFragment.setmListIndex(0);
 
+        fragmentManager.beginTransaction()
+                .add(R.id.Bodyfragment, bodyFragment)
+                .commit();
+        // ...End
+
+        //LegFragment Starting...
+        BodyPartFragment legFragment = new BodyPartFragment();
+        legFragment.setmImageIds(AndroidImageAssets.getLegs());
+        legFragment.setmListIndex(0);
+
+        fragmentManager.beginTransaction()
+                .add(R.id.Legfragment, legFragment)
+                .commit();
+        // ...End
 
     }
 }
